@@ -30,16 +30,16 @@ class LoginForm extends Component{
         }
     }
 
-    renderButton(){
-        if(this.props.loading){
-            return <Spinner size="large" />;
-        }
-        return(
-            <Button onPress={this.onButtonPress.bind(this)}>
-            Login
-        </Button>
-        );
-    }
+    // renderButton(){
+    //     if(this.props.loading){
+    //         return <Spinner size="large" />;
+    //     }
+    //     return(
+    //         <Button onPress={this.onButtonPress.bind(this)}>
+    //         Login
+    //     </Button>
+    //     );
+    // }
 
     render(){
         return(
@@ -64,7 +64,9 @@ class LoginForm extends Component{
                 </CardSection>
                      {this.renderError()}
                 <CardSection>
-                   {this.renderButton()}
+                <Button onPress={this.onButtonPress.bind(this)}>
+            Login
+        </Button>
                 </CardSection>
             </Card>
         );
