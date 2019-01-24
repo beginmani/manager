@@ -76,7 +76,7 @@ const styles ={
     errorTextStyle: {
         fontSize:25,
         alignSelf:'center',
-        color:'red'
+        color:'green'
     }
 }
 const mapStateToProps = ({auth}) =>{
