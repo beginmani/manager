@@ -30,16 +30,16 @@ class LoginForm extends Component{
         }
     }
 
-    // renderButton(){
-    //     if(this.props.loading){
-    //         return <Spinner size="large" />;
-    //     }
-    //     return(
-    //         <Button onPress={this.onButtonPress.bind(this)}>
-    //         Login
-    //     </Button>
-    //     );
-    // }
+    renderButton(){
+        if(this.props.loading){
+            return <Spinner size="large" />;
+        }
+        return(
+            <Button onPress={this.onButtonPress.bind(this)}>
+            Login
+        </Button>
+        );
+    }
 
     render(){
         return(
@@ -64,9 +64,7 @@ class LoginForm extends Component{
                 </CardSection>
                      {this.renderError()}
                 <CardSection>
-                <Button onPress={this.onButtonPress.bind(this)}>
-            Login
-        </Button>
+                  {this.renderButton()}
                 </CardSection>
             </Card>
         );
@@ -74,9 +72,9 @@ class LoginForm extends Component{
 }
 const styles ={
     errorTextStyle: {
-        fontSize:25,
+        fontSize:20,
         alignSelf:'center',
-        color:'green'
+        color:'red'
     }
 }
 const mapStateToProps = ({auth}) =>{
